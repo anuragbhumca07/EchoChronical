@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terrain Generator</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+            button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #terrain-container {
+              border: 5px solid rgb(1, 2, 18);
+              justify-content: center;
+             align-items: center;
+              display: grid;
+            gap: 1px;
+            padding: 10px;
+            max-width: 1100px;
+            margin: 20px auto;
+            }
+        #console-popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 14px;
+            padding: 10px;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        #console-popup p {
+            margin: 5px 0;
+        }
+           
+    </style>
+</head>
+<div id="console-popup" style="position: fixed; bottom: 0; left: 0; width: 100%; max-height: 150px; overflow-y: auto; background: rgba(0, 0, 0, 0.8); color: white; font-family: Arial, sans-serif; font-size: 14px; padding: 10px; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);"></div>
+<body>
+    <div class="controls">
+        <button id="generate-terrain-button">Generate Terrain</button>
+    </div>
+    <div id="terrain-container"></div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
